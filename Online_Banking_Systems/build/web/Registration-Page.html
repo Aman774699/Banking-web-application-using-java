@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function validate()
+        {
+            const pass=document.getElementById('password').value;
+            const cpass=document.getElementById('confirm-password').value;
+            if(pass!==cpass)
+            {
+                alert("password and conform password must be same");
+                return false;
+            }
+//            if(pass.length !== 8)
+//            {
+//                alert("The length of password must be 8");
+//                return false;
+//            }
+//            const user=document.getElementById('username').value;
+//            const pattern=/^[a-zA-Z0-9]$/;
+//            if(!pattern.test(user))
+//            {
+//                alert("username must contain only latter and number");
+//                return false;
+//            }
+            return true;
+        };
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Registration</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.container  {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #0074b7;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00528f;
+}
+</Style>
+</head>
+<body>
+<Center>
+    <div class="container">
+        <form id="registration-form" method="post" action="Registration_new" onsubmit="return validate();">
+            <h1>Bank Registration</h1>
+            <div class="form-group"  >
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" >
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required   >
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password"  required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required >
+            </div>
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    </Center>
+</body>
+</html>

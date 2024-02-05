@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 100px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px 0px #888;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .btn-container {
+            text-align: center;
+        }
+
+        .login-btn {
+            background: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        .new-user {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .new-user a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <div class="container">
+        <img src="https://1000logos.net/wp-content/uploads/2018/03/SBI" width="100" height="100"/>
+        <h2>State Bank Of India</h2>
+        <form method="post" action="ClientLogin_new">
+            <input type="text" placeholder="Net Banking Id" name="NetBankingId" required>
+            <input type="password" placeholder="Password" name="password" required>
+            <div class="btn-container">
+                <button class="login-btn" type="submit">Login</button>
+            </div>
+        </form>
+        <br/>
+        <form action="Registration-Page.html">
+            <button class="login-btn">New user Registration</button>
+        </form>
+        <br>
+        <form action="Open_account.html">
+            <button class="login-btn">Create new bank account</button>
+        </form>
+</center>
+ </body>
+</html>
